@@ -4,6 +4,7 @@
   min-block-size: 100vh;
   padding: var(--page-padding);
   background-color: var(--background-color);
+  background-attachment: fixed;
 }
 
 .decorated-zone {
