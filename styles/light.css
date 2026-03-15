@@ -1,0 +1,37 @@
+:root.theme-light {
+  --accent-color: #ff8dcb;
+  --accent-color-with-opacity: #ff8dcb66;
+  --title-color: #ffc2e6;
+  --title-shadow: #FF8DCB;
+  --section-title-color: #353430;
+  --text-color: #353430;
+  --decor-element-color: #353430;
+  --background-color: #fff1f7;
+  --background-image: url('../images/cover-image-light.png');
+  --rec-decor-visibility: hidden;
+  --corners-color: #353430;
+  --button-color: #353430;
+  --button-hover-color: #32312d66;
+  --link-shadow: #ff8dcb;
+  --link-focus-outline: #353430;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --accent-color-with-opacity: #ff8dcb66;
+    --title-color: #ffc2e6;
+    --title-shadow: #FF8DCB;
+    --section-title-color: #353430;
+    --text-color: #353430;
+    --decor-element-color: #353430;
+    --background-color: #fff1f7;
+    --background-image: url('../images/cover-image-light.png');
+    --rec-decor-visibility: hidden;
+    --corners-color: #353430;
+    --button-color: #353430;
+    --button-hover-color: #32312d66;
+    --link-shadow: #ff8dcb;
+    --link-focus-outline: #353430;
+  }
+}
