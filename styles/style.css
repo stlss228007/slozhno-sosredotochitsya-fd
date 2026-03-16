@@ -5,6 +5,10 @@
   padding: var(--page-padding);
   background-color: var(--background-color);
   background-attachment: fixed;
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .decorated-zone {
@@ -39,13 +43,10 @@
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   min-height: 668px;
+  height: 100vh;
   position: relative;
   margin: calc(var(--page-padding) * -1);
   padding: var(--page-padding);
-  background-image: var(--background-image);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .header__rec {
@@ -66,17 +67,16 @@
   content: '';
   display: inline-block;
   inline-size: 9px;
-  block-size: 10px;
+  block-size: 9px;
   background-color: var(--decor-element-color);
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--decor-element-color);
 }
 
 .header__theme-menu {
-  position: absolute;
-  inset-inline-end: var(--page-padding);
-  inset-block-start: var(--page-padding);
-  z-index: 10;
+  justify-self: end;
+  align-self: center;
+  grid-row: 1;
 }
 
 .header__theme-menu-list {
@@ -260,12 +260,11 @@
 .footer {
   display: grid;
   place-items: center;
-  block-size: calc(100vh - var(--page-padding) * 2);
+  height: 100vh;
   min-block-size: calc(668px - var(--page-padding) * 2);
   margin-block-start: auto;
   margin: calc(var(--page-padding) * -1);
   padding: var(--page-padding);
-  background-color: var(--background-color);
 }
 
 .footer__title {
@@ -276,17 +275,6 @@
   text-shadow: 2px 2px 0 var(--title-shadow);
 }
 
-.theme-light .title-decor,
-:root.theme-light .title-decor {
-  color: #353430;
-}
-
-@media (prefers-color-scheme: light) {
-  .title-decor {
-    color: #353430;
-  }
-}
-
 @media (width < 768px) {
   :root {
     --page-padding: 10px;
@@ -295,7 +283,7 @@
   }
 
   .header__theme-menu {
-    inset-block-start: 11%;
+    grid-row: 1;
   }
 
   .header__title {
@@ -310,12 +298,11 @@
   }
 
   .main {
-    margin-top: 50px;
+    margin: 50px 0;
   }
 
   .footer {
     min-block-size: 668px;
-    margin-top: 0;
   }
 }
 
@@ -328,10 +315,6 @@
 
   .header {
     min-block-size: 1024px;
-  }
-
-  .header__theme-menu {
-    inset-block-start: 19%;
   }
 
   .header__title {
@@ -436,9 +419,8 @@
   }
 
   .header__theme-menu {
-    inset-inline-end: 50%;
-    transform: translateX(50%);
-    inset-block-start: var(--page-padding);
+    justify-self: center;
+    align-self: start;
   }
 
   .header__theme-menu-list {
