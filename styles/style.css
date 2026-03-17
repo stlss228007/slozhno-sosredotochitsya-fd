@@ -139,7 +139,7 @@
   font-weight: 700;
   font-size: inherit;
   line-height: inherit;
-  color: var(--background-color);
+  color: var(--title-decor-text);
   background-color: var(--accent-color);
 }
 
@@ -199,6 +199,7 @@
   inline-size: 100%;
   max-inline-size: 100%;
   word-wrap: break-word;
+  color: var(--text-color);
 }
 
 .card__text a {
